@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+
+
+    <title>VREGI</title>
+<!--
+
+Lava Landing Page
+
+https://templatemo.com/tm-540-lava-landing-page
+
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="static/font-awesome.css">
+
+    <link rel="stylesheet" href="static/login-templatemo-lava-try.css">
+
+    <link rel="stylesheet" href="static/owl-carousel.css">
+
+
+    <style>                                               
+
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 9999; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+          border-radius: 25px;
+        }
+
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          opacity: 0;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: #fefefe;
+          opacity: 0;
+          text-decoration: none;
+          cursor: default;
+        }
+
+        .container .btn {
+          position: absolute;
+          top: 28%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: #555;
+          color: white;
+          font-size: 16px;
+          padding: 5px 10px;
+          border: none;
+          cursor: pointer;
+          border-radius: 25px;
+          text-align: center;
+        }
+
+        .container .btn:hover {
+          background-color: #FF0000;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+          margin-top: 20px;
+          margin-left: -50px;
+        }
+
+        .dropdown-content {
+          margin-left: 20px;
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+          background-color: #3e8e41;
+        }
+
+        .about-section{
+            z-index: 99;
+            border-radius: 20px;
+            background-color: white;
+            margin-top: 70px;
+            text-align: center;
+            margin-left: 220px;
+            margin-right: 220px;
+        }
+
+        .about-head{
+            padding-top: 20px;
+        }
+
+        .about-content{
+            padding: 20px;
+        }
+
+        .about-section p{
+            color: black;
+            text-align: left;
+            text-indent: 50px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .about-section h4{
+            text-align: left;
+        }
+        .contributors{
+            text-align: left;
+        }
+
+        footer{
+            margin-top: -50px;
+        }
+
+        .btn-classify{
+            margin-left: -60px;
+            margin-top: 30px;
+        }
+
+        .btn-learn{
+            margin-left: -60px;
+            margin-top: 55px;
+        }
+
+        .features-item-intro .main-button-slider{
+            width: 110%;
+            border-radius: 25px;
+            border-style: solid;
+            border-width: thin;
+            border-color: #a066cb;
+        }
+
+        .features-item-intro .main-button-slider:hover{
+            border-radius: 25px;
+            border-style: solid;
+            border-width: thin;
+            border-color: #1b38b1;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <!--<div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#welcome" class="logo">
+                            <img src="static/images/try-logo.png" alt="Logo">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#welcome" class="menu-item">Home</a></li>
+                            <li class="scroll-to-section"><a href="#learn" class="menu-item">Learn</a></li>
+                            <li class="scroll-to-section"><a href="#about" class="menu-item">About</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="left-image-decor"></div>
+    <div class="welcome-area" id="welcome">
+
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <h1> Welcome,<br>test your <em><br>VOICE <br>REGISTERS</em></h1>
+                        
+                            <p>Let's see how much you have <br>learned about voice registers and <br>test it through your own recordings.</p>
+                        <a href="#intro" class="main-button-slider">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <div class="right-image-decor"></div>
+
+    <section class="section" id="intro">
+        <div class="intro">
+        <h2><center><br><br><br><br>Introduction to the VREGI App</center></h2>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <div class="features-item-intro">
+                        <div class="features-icon">
+                            <img class="classify" src="static/images/classify.png" alt="" style="z-index: 0">
+                            <h3>Classify</h3>
+                            <p>This feature will classify or detect your used voice register on your uploaded recordings. Only 4 voice registers will be detected: Vocal Fry, Chest Voice, Head Voice and Falsetto. This will allow you to track and practice your desired voice register using your own recordings.</p>
+                            <div class="dropdown">
+                              <button class="main-button-slider">Test it now</button>
+                              <div class="dropdown-content">
+                              <a href="{{url_for('pred')}}">Female</a>
+                              <a href="{{url_for('pred')}}">Male</a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col"
+                    data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                    <div class="features-item-intro">
+                        <div class="features-icon">
+                            <img class="learn" src="static/images/learn.png" alt="" style="z-index: 0">
+                            <h3>Learn</h3>
+                            <p>This feature consists of brief description of the voice registers and gives you short video tutorials. The video tutorials also teach different vocal exercises which aims to enhance your singing voice.
+                            <div class="btn-learn">
+                                <a href="#learn" class="main-button-slider">Head to learn</a>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section" id="learn">
+        <div class="intro">
+        <h2><center><br><br>Learn more about voice registers...</center></h2>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/vocal-fry.png" alt="" style="z-index: 0">
+                            <button id ="myBtn" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Vocal Fry</h4>
+                            <p>Vocal fry is the lowest register (tone) of your voice characterized by its deep, creaky, breathy sound.</p>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                <br>
+                                <center><h4>Vocal Fry Sample Video</h4>
+                                <iframe class="yt-vid" width="840" height="500" src="https://www.youtube.com/embed/nbuNotrDeUI">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/chest-voice.png" alt="" style="z-index: 0">
+                            <button id ="myBtn2" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Chest Voice</h4>
+                            <p>The term “chest voice” refers to the register in which most people speak and sing low to medium-high pitches.
+                            </p>
+                            <div id="myModal2" class="modal">
+                                <div class="modal-content">
+                                <br>
+                                <center><h4>Chest Voice Sample Video</h4>
+                                <iframe width="840" height="500" src="https://www.youtube.com/embed/EWUFRN_HnMI">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/head-voice.png" alt="" style="z-index: 0">
+                            <button id ="myBtn3" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Head Voice</h4>
+                            <p>A register above chest voice, refers to the sort of singing voice that gives a ringing feeling in the singer's head.</p>
+                            <div id="myModal3" class="modal">
+                                <div class="modal-content">
+                                <br>
+                                <center><h4>Head Voice Sample Video</h4>
+                                <iframe width="840" height="500" src="https://www.youtube.com/embed/-_8bTjWvorM">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/falsetto.png" alt="" style="z-index: 0">
+                            <button id ="myBtn4" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Falsetto</h4>
+                            <p>Falsetto is a mode of singing that sounds breathy, flutey and hollow. It’s usually found in the upper registers of male and female singers.</p>
+                            <div id="myModal4" class="modal">
+                                <div class="modal-content">
+                                <br>
+                                <center><h4>Falsetto Sample Video</h4>
+                                <iframe width="840" height="500" src="https://www.youtube.com/embed/QaCXysiTaaE">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/mixed-voice.png" alt="" style="z-index: 0">
+                            <button id ="myBtn5" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Mixed Voice</h4>
+                            <p>Mixed voice is when you combine your head voice and chest voice to create an even singing tone from the bottom to the top of your voice.</p>
+                            <div id="myModal5" class="modal">
+                                <div class="modal-content">
+                                <br>
+                                <center><h4>Mixed Voice Sample Video</h4>
+                                <iframe width="840" height="500" src="https://www.youtube.com/embed/M5IROVRV86c">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/whistle.png" alt="" style="z-index: 0">
+                            <button id ="myBtn6" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Whistle Register</h4>
+                            <p>Whistle Register is the highest vocal register created by the isolated vibration of the anterior section of the vocal cords.</p>
+                            <div id="myModal6" class="modal">
+                                <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <center><h4>Whistle Register Sample Video</h4>
+                                <iframe width="840" height="500" src="https://www.youtube.com/embed/0beCFyVyILQ">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <section id="about">
+    <div class="about-section">
+            <div class="about-head">
+                <h1>ABOUT US AND VREGI APP</h1>
+                <div class="about-content">
+                    <p>Voice register is another method or notion in singing voice that beginners should be aware of. This web application aims to implement a classification model that can distinguish the spectral difference of the four voice registers: <b>Vocal Fry, Chest Voice, Head Voice and Falsetto</b> where it can assist users in understanding how to use them. Also, it has video tutorials and voice exercises on each voice register made by a vocal coach named <b>"Freya Casey"</b> <a href="https://www.youtube.com/c/foundmydestiny74FreyaCaseyMusic/featured">(Direct to her youtube page)</a>.
+                    </p>
+                    <br>
+                    <p><b>Machine Learning</b> was utilized to the development of the web application. A<b> classification model</b> was trained and built by train and test datasets to generate and analyze the relationship between the attributes of the dataset and the resulting model can be used to classify or predict a user's preference for any unseen new items or data.
+                    </p>
+                    <br>
+                    <div class="contributors">
+                        <h4>Contributors:</h4>
+                        <br>
+                        Zarica Ann Capua (zcapua.a61827285@umak.edu.ph)
+                        <br>
+                        Mark Kiros Magpayo (mmagpayo.k11620624@umak.edu.ph)
+                        <br>
+                        Carl Joshua Ricardo (cricardo.a61827949@umak.edu.ph)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto mt-5">
+                    <div class="footer-content">
+                        <br><br><span style="color: white;">Copyright (C) 2022 VREGI APP. All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="static/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="static/popper.js"></script>
+    <script src="static/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="static/owl-carousel.js"></script>
+    <script src="static/scrollreveal.min.js"></script>
+    <script src="static/waypoints.min.js"></script>
+    <script src="static/jquery.counterup.min.js"></script>
+    <script src="static/imgfix.min.js"></script>
+
+    <!-- Global Init -->
+    <script src="static/custom.js"></script>
+
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+      else if (event.target == modal2) {
+        modal2.style.display = "none";
+      }
+      else if (event.target == modal3) {
+        modal3.style.display = "none";
+      }
+      else if (event.target == modal4) {
+        modal4.style.display = "none";
+      }
+      else if (event.target == modal5) {
+        modal5.style.display = "none";
+      }
+      else if (event.target == modal6) {
+        modal6.style.display = "none";
+      }
+    }
+
+    $(document).keydown(function(event) { 
+      if (event.keyCode == 27) { 
+        modal.style.display = "none";
+        modal2.style.display = "none";
+        modal3.style.display = "none";
+        modal4.style.display = "none";
+        modal5.style.display = "none";
+        modal6.style.display = "none";
+      }
+    });
+
+    // 2
+    var modal2 = document.getElementById("myModal2");
+
+    // Get the button that opens the modal
+    var btn2 = document.getElementById("myBtn2");
+
+
+    // When the user clicks the button, open the modal 
+    btn2.onclick = function() {
+      modal2.style.display = "block";
+    }
+
+    // 3
+    var modal3 = document.getElementById("myModal3");
+
+    // Get the button that opens the modal
+    var btn3 = document.getElementById("myBtn3");
+
+
+    // When the user clicks the button, open the modal 
+    btn3.onclick = function() {
+      modal3.style.display = "block";
+    }
+
+    // 4
+    var modal4 = document.getElementById("myModal4");
+
+    // Get the button that opens the modal
+    var btn4 = document.getElementById("myBtn4");
+
+
+    // When the user clicks the button, open the modal 
+    btn4.onclick = function() {
+      modal4.style.display = "block";
+    }
+
+    // 5
+    var modal5 = document.getElementById("myModal5");
+
+    // Get the button that opens the modal
+    var btn5 = document.getElementById("myBtn5");
+
+
+    // When the user clicks the button, open the modal 
+    btn5.onclick = function() {
+      modal5.style.display = "block";
+    }
+
+    // 6
+    var modal6 = document.getElementById("myModal6");
+
+    // Get the button that opens the modal
+    var btn6 = document.getElementById("myBtn6");
+
+
+    // When the user clicks the button, open the modal 
+    btn6.onclick = function() {
+      modal6.style.display = "block";
+    }
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>VREGI</title>
+<!--
+
+Lava Landing Page
+
+https://templatemo.com/tm-540-lava-landing-page
+
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="static/font-awesome.css">
+
+    <link rel="stylesheet" href="static/templatemo-lava-try.css">
+
+    <link rel="stylesheet" href="static/owl-carousel.css">
+
+    <style>                                                
+
+
+      
+
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 9999; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto;/*   Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+        }
+
+        /* Modal Content */
+        .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          opacity: 0;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: #000;
+          opacity: 0;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .container .btn {
+          position: absolute;
+          top: 28%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: #555;
+          color: white;
+          font-size: 16px;
+          padding: 5px 10px;
+          border: none;
+          cursor: pointer;
+          border-radius: 25px;
+          text-align: center;
+        }
+
+        .container .btn:hover {
+          background-color: #FF0000;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** 
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="static/images/try-logo.png" alt="Logo">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#welcome" class="menu-item">Home</a></li>
+                            <li class="scroll-to-section"><a href="#learn" class="menu-item">Learn</a></li>
+                            <li class="scroll-to-section"><a href="#about" class="menu-item">About</a></li>
+                            </li>
+                            
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="left-image-decor"></div>
+    <div class="welcome-area" id="welcome">
+
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <h1>Learn to <br>sing with  <em><br>VOICE <br>REGISTERS</em></h1>
+                        
+                            <p>Learn, practice, and monitor your <br>singing progress through voice <br>register assessments.</p>
+                        
+                        <a href="/logreg" class="main-button-slider">Login here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <div class="right-image-decor"></div>
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section" id="learn">
+        <h2><center> <br><br>Learn more about voice registers...</center></h2>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/vocal-fry.png" alt="" style="z-index: 0">
+                            <button id ="myBtn" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Vocal Fry</h4>
+                            <p>Vocal fry is the lowest register (tone) of your voice characterized by its deep, creaky, breathy sound.</p>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                <br>
+                                <center><h4>Vocal Fry Sample Video</h4>
+                                <iframe width="840" height="500" src="https://www.youtube.com/embed/nbuNotrDeUI">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/chest-voice.png" alt="" style="z-index: 0">
+                            <button id ="myBtn2" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Chest Voice</h4>
+                            <p>The term “chest voice” refers to the register in which most people speak and sing low to medium-high pitches.
+                            </p>
+                            <div id="myModal2" class="modal">
+                                <div class="modal-content">
+                                <br>
+                                <center><h4>Chest Voice Sample Video</h4>
+                                <iframe width="840" height="500" src="https://www.youtube.com/embed/EWUFRN_HnMI">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/head-voice.png" alt="" style="z-index: 0">
+                            <button id ="myBtn3" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Head Voice</h4>
+                            <p>A register above chest voice, refers to the sort of singing voice that gives a ringing feeling in the singer's head.</p>
+                            <div id="myModal3" class="modal">
+                                <div class="modal-content">
+                                <br>
+                                <center><h4>Head Voice Sample Video</h4>
+                                <iframe width="840" height="500" src="https://www.youtube.com/embed/-_8bTjWvorM">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/falsetto.png" alt="" style="z-index: 0">
+                            <button id ="myBtn4" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Falsetto</h4>
+                            <p>Falsetto is a mode of singing that sounds breathy, flutey and hollow. It’s usually found in the upper registers of male and female singers.</p>
+                            <div id="myModal4" class="modal">
+                                <div class="modal-content">
+                                <br>
+                                <center><h4>Falsetto Sample Video</h4>
+                                <iframe width="840" height="500" src="https://www.youtube.com/embed/QaCXysiTaaE">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/mixed-voice.png" alt="" style="z-index: 0">
+                            <button id ="myBtn5" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Mixed Voice</h4>
+                            <p>Mixed voice is when you combine your head voice and chest voice to create an even singing tone from the bottom to the top of your voice.</p>
+                            <div id="myModal5" class="modal">
+                                <div class="modal-content">
+                                <br>
+                                <center><h4>Mixed Voice Sample Video</h4>
+                                <iframe width="840" height="500" src="https://www.youtube.com/embed/M5IROVRV86c">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <img src="static/images/whistle.png" alt="" style="z-index: 0">
+                            <button id ="myBtn6" type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-play"></span> ▶ Play
+                            </button>
+                            <h4>Whistle Register</h4>
+                            <p>Whistle Register is the highest vocal register created by the isolated vibration of the anterior section of the vocal cords.</p>
+                            <div id="myModal6" class="modal">
+                                <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <center><h4>Whistle Register Sample Video</h4>
+                                <iframe width="840" height="500" src="https://www.youtube.com/embed/0beCFyVyILQ">
+                                </iframe></center>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+
+    <!-- ***** Footer Start ***** -->
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <!-- ***** Contact Form Start ***** -->
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="contact-form">
+                            <form id="contact" action="" method="post">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <fieldset>
+                                            <input name="name" type="text" id="name" placeholder="Full Name" required=""
+                                                style="background-color: rgba(250,250,250,0.3);">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <fieldset>
+                                            <input name="email" type="text" id="email" placeholder="E-Mail Address"
+                                                required="" style="background-color: rgba(250,250,250,0.3);">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <textarea name="message" rows="6" id="message" placeholder="Your Message"
+                                                required="" style="background-color: rgba(250,250,250,0.3);"></textarea>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <button type="submit" id="form-submit" class="main-button">Send Message
+                                                Now</button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- ***** Contact Form End ***** -->
+                    <div class="right-content col-lg-6 col-md-12 col-sm-12">
+                        <h2>More About <em>VREGI</em></h2>
+                        <p>Phasellus dapibus urna vel lacus accumsan, iaculis eleifend leo auctor. Duis at finibus odio.
+                            Vivamus ut pharetra arcu, in porta metus. Suspendisse blandit pulvinar ligula ut elementum.
+                            <br><br>If you need this contact form to send email to your inbox, you may follow our <a
+                                rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact</a> page
+                            for more detail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="static/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="static/popper.js"></script>
+    <script src="static/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="static/owl-carousel.js"></script>
+    <script src="static/scrollreveal.min.js"></script>
+    <script src="static/waypoints.min.js"></script>
+    <script src="static/jquery.counterup.min.js"></script>
+    <script src="static/imgfix.min.js"></script>
+
+    <!-- Global Init -->
+    <script src="static/custom.js"></script>
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+      else if (event.target == modal2) {
+        modal2.style.display = "none";
+      }
+      else if (event.target == modal3) {
+        modal3.style.display = "none";
+      }
+      else if (event.target == modal4) {
+        modal4.style.display = "none";
+      }
+      else if (event.target == modal5) {
+        modal5.style.display = "none";
+      }
+      else if (event.target == modal6) {
+        modal6.style.display = "none";
+      }
+    }
+
+    // 2
+    var modal2 = document.getElementById("myModal2");
+
+    // Get the button that opens the modal
+    var btn2 = document.getElementById("myBtn2");
+
+
+    // When the user clicks the button, open the modal 
+    btn2.onclick = function() {
+      modal2.style.display = "block";
+    }
+
+    // 3
+    var modal3 = document.getElementById("myModal3");
+
+    // Get the button that opens the modal
+    var btn3 = document.getElementById("myBtn3");
+
+
+    // When the user clicks the button, open the modal 
+    btn3.onclick = function() {
+      modal3.style.display = "block";
+    }
+
+    // 4
+    var modal4 = document.getElementById("myModal4");
+
+    // Get the button that opens the modal
+    var btn4 = document.getElementById("myBtn4");
+
+
+    // When the user clicks the button, open the modal 
+    btn4.onclick = function() {
+      modal4.style.display = "block";
+    }
+
+    // 5
+    var modal5 = document.getElementById("myModal5");
+
+    // Get the button that opens the modal
+    var btn5 = document.getElementById("myBtn5");
+
+
+    // When the user clicks the button, open the modal 
+    btn5.onclick = function() {
+      modal5.style.display = "block";
+    }
+
+    // 6
+    var modal6 = document.getElementById("myModal6");
+
+    // Get the button that opens the modal
+    var btn6 = document.getElementById("myBtn6");
+
+
+    // When the user clicks the button, open the modal 
+    btn6.onclick = function() {
+      modal6.style.display = "block";
+    }
+
+
+
+    </script>
+
+
+
+</body>
+</html>

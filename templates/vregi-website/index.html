@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple Recorder.js demo with record, stop and pause - addpipe.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+  .button2 {background-color: #008CBA;} /* Blue */
+  .button3 {background-color: #f44336;} /* Red */
+
+
+    </style>
+  </head>
+  <body>
+    <h1>VIOLIN CLASSIFICATION </h1>
+    {% if prediction_text %}
+    <h1 id="text">YOU PLAYED THE {{ prediction_text}}</h1>
+  {% endif %}
+    <div id="controls">
+     <button id="recordButton"  class="button" >Record</button>
+     <button id="pauseButton" disabled  class="button button2">Pause</button>
+     <button id="stopButton" disabled class="button button3">Stop</button>
+    </div>
+
+    <p><strong>Recordings:</strong></p>
+    <ol id="recordingsList"></ol>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="static/appy.js "></script>
+
+
+    <form action="{{ url_for('predict')}}" method="post"  enctype="multipart/form-data" id="predididi">
+
+      <button type="submit", class="btn"> Predict </button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login and Register Form </title>
+    <link rel="stylesheet" href="static/log-reg.css">
+  </head>
+  <body>
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="#" alt="">
+        </div>
+<ul class="nav-area">
+<!--<li><a href="#">Home</a></li>-->
+<!--<li><a href="#">About</a></li>-->
+<!--<li><a href="#">Contact</a></li>-->
+</ul>
+</div>
+    <div class="center">
+      <h1>Login</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login">
+      </form>
+    
+
+        <div class="signup_link">
+          Not a member? <button id="myBtn" class="reg-button">Sign up</button>
+           <br><a href="/loginlanding">Ghost Login</a>
+        </div>
+                                 
+         </div>
+     
+    <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                  <span class="close">&times;</span>
+                                  <div class="register">
+                                    <h1>Register</h1>
+                                    <form method="post">
+                                      <div class="txt_field">
+                                        <input type="text" required>
+                                        <span></span>
+                                        <label>Name</label>
+                                      </div>
+
+                                      <div class="txt_field">
+                                        <input type="text" required>
+                                        <span></span>
+                                        <label>Gender</label>
+                                      </div>
+
+                                      <div class="txt_field">
+                                        <input type="text" required>
+                                        <span></span>
+                                        <label>Email</label>
+                                      </div>
+
+                                      <div class="txt_field">
+                                        <input type="number" required>
+                                        <span></span>
+                                        <label>Phone</label>
+                                      </div>
+
+                                      <div class="txt_field">
+                                        <input type="password" required>
+                                        <span></span>
+                                        <label>Password</label>
+                                      </div>
+                                      <input type="submit" value="Register">
+                                    </form>
+                                </div>
+                            
+                                </div>
+                            </div>    
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+
+  </header>
+  </body>
+</html>
