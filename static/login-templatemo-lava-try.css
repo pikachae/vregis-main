@@ -505,6 +505,7 @@ a .logo:hover{
   color: #A066CB;
 }
 
+
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 12px;
@@ -613,6 +614,7 @@ welcome
 --------------------------------------------- 
 */
 .welcome-area {
+  margin-top: -25px;
   margin-right: 0;
   padding-right: 0;
   width: 200vh;
