@@ -65,11 +65,11 @@
           color: #fff;
         }
         .btn-pred{
-          background-color: #a066cb;
+          background-color: #8e8e8e;
           border-radius: 25px;
           border-style: solid;
           border-width: medium;
-          border-color: #a066cb;
+          border-color: #8e8e8e;
           margin-left: 20px;
           margin-top: 20px;
           color: white;
@@ -78,13 +78,8 @@
           display: inline-flex;  
           justify-content: center;
           align-items: center;
-          cursor: pointer;
+          cursor: default;
           margin-bottom: 20px;
-        }
-        .btn-pred:hover {
-          background-color: #1b38b1;
-          border-color: #1b38b1;
-          color: #fff;
         }
         .results{
           position: absolute;
@@ -92,7 +87,6 @@
           margin-bottom: 50px;
         }
         .result-button{
-          margin-left: 25px;
           background-color: #a066cb;
           border-radius: 25px;
           border-style: solid;
@@ -130,7 +124,7 @@
           border-radius: 25px;
           background-color: #fefefe;
           margin: 15% auto; /* 15% from the top and centered */
-          padding: 20px;
+          padding: 10px;
           border: 1px solid #888;
           width: 50%; /* Could be more or less, depending on screen size */
           text-align: center;
@@ -157,7 +151,139 @@
             margin-top: 28px;
             margin-left: -100px;
         }
+        .ranks{
+            text-align: left;
+        }
+        .footer-content{
+            margin-top: -110px;
+        }
+        @media (max-width: 1420px) {
+            .getaudio-content{
+                margin-top: -100px;
+                margin-bottom: 50px;
+                width: 70%;
+                height: 70%;
+            }
+            .result-button{
+                margin-top: -100px;
+                padding: 10px;
+            }
+            .valid{
+                margin-left: 0px;
+                padding: 1px;
+            }
+        }
+        @media (max-width: 1285px) {
+            .audioplayback{
+                width: 90%;
+            }
+        }
+        @media (max-width: 1200px) {
+            .header-area .main-nav .nav {
+                margin-left: 64%;
+            }
+        }
 
+        @media (max-width: 1140px) {
+            .getaudio-content{
+                margin-top: -100px;
+                margin-bottom: 50px;
+                width: 70%;
+                height: 330px;
+            }
+            label{
+                margin-bottom: 100px;
+                padding: 10px;
+            }
+            .btn-pred{
+                margin-bottom: 100px;
+                padding: 10px;
+            }
+            .result-button{
+                margin-top: -100px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .getaudio-content{
+                margin-top: 100px;
+                margin-bottom: 10px;
+                width: 70%;
+                height: 70%;
+            }
+            .title{
+                font-size: 24px;
+            }
+            .description{
+                font-size: 14px;
+            }
+            label{
+                margin-bottom: 100px;
+                padding: 10px;
+                font-size: 13px;
+                width: 300%;
+            }
+            .btn-pred{
+                margin-bottom: 100px;
+                padding: 10px;
+                font-size: 13px;
+                width: 70%;
+                height: 55px;
+                margin-top: 22px;
+            }
+            .result-button{
+                margin-top: 40px;
+                margin-bottom: 100px;
+                padding: 10px;
+                font-size: 13px;
+                height: 55px;
+            }
+            .ranks{
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 810px) {
+            .getaudio-content{
+                margin-top: 100px;
+                margin-bottom: 200px;
+                width: 60%;
+                height: 40%;
+            }
+            .title{
+                font-size: 24px;
+            }
+            .description{
+                font-size: 14px;
+            }
+            label{
+                margin-bottom: 100px;
+                padding: 10px;
+                width: 150px;
+                margin-left: -70px;
+            }
+            .btn-pred{
+                margin-bottom: 100px;
+                padding: 10px;
+                width: 150px;
+            }
+            .result-button{
+                margin-top: -50px;
+                margin-bottom: 100px;
+                padding: 10px;
+            }
+        }
+        @media (max-width: 604px) {
+            .getaudio-content{
+                width: 500px;
+                height: 500px;
+            }
+            .result-button{
+                margin-top: -100px;
+            }
+
+        }
 
     </style>
 
@@ -196,7 +322,7 @@
     <div class="getaudio-content">
 
         <p class="title"> Voice Register Classification</p>
-        <p class="description">This function allows you to automatically detect your used voice registers on your uploaded recordings however it can only detect <b>vocal fry</b>, <b>chest voice</b>, <b>head voice</b> and <b>falsetto</b>. After you uploaded and clicked "Predict", below will show the results of the detected voice registers on your recordings. The recordings must be .ogg, .wav, .flac file. Also, the code takes only one recording and the recording must have a length within 4 to 10 seconds only.</p>
+        <p class="description">This function allows you to automatically detect your used voice registers on your uploaded recordings however it can only detect <b>vocal fry</b>, <b>chest voice</b>, <b>head voice</b> and <b>falsetto</b>. After you uploaded and clicked "Predict", below will show the results of the detected voice registers on your recordings. The recordings must be .ogg, .wav, .flac file. Also, the code takes only one recording, can detect only one register per recording and the recording must have a length within 4 to 10 seconds only.</p>
 
         <form action="{{ url_for('predict')}}" method="post"  enctype="multipart/form-data">
             <div class="container">
@@ -220,9 +346,10 @@
                     <div class="col">
                         <button id="predict2" type="submit", class="btn-pred" disabled> Predict </button>
                     </div>
-        </form>
+
                 </div>
             </div>
+        </form>
     </div>
 
     <div class="results">
@@ -232,16 +359,42 @@
 
       <div class="modal-content">
       <span class="close">&times;</span>
-      <p><h2>Prediction Rankings</h2><br>
+      <span class="border-bottom"><h2>Prediction Rankings</h2></span><br>
 
-        <p class="outputp">1st. {{ prediction_text }}</p><br>
-        <p class="outputp">2nd. {{ prediction_text2 }}</p>
-
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="ranks">
+                        <p class="outputp">1st. {{ prediction_text }}</p><br>
+                        <p class="outputp">2nd. {{ prediction_text2 }}</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="ranks">
+                        <h4>Uploaded Audio Playback</h4>
+                        <audio id="audio" class="audioplayback" controls><source src="{{audiofile}}" id="src" /></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
 
       </div>
       </div>
 
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto mt-5">
+                    <div class="footer-content">
+                        <br><br><span style="color: white;">Copyright (C) 2022 VREGI APP. All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 
 
         <script>
@@ -262,6 +415,20 @@
                     document.getElementById("predict2").disabled = false;
                 };
                 reader.readAsDataURL(fileInput.files[0]);
+
+                document.getElementById("predict2").style.backgroundColor = "#a066cb";
+                document.getElementById("predict2").style.borderColor = "#a066cb";
+                document.getElementById("predict2").style.cursor = "pointer";
+                document.getElementById("predict2").onmouseover = function() {mouseOver()};
+                document.getElementById("predict2").onmouseout = function() {mouseOut()};
+                    function mouseOver() {
+                      document.getElementById("predict2").style.backgroundColor = "#1b38b1";
+                      document.getElementById("predict2").style.borderColor = "#1b38b1";
+                    }
+                    function mouseOut() {
+                      document.getElementById("predict2").style.backgroundColor = "#a066cb";
+                      document.getElementById("predict2").style.borderColor = "#a066cb";
+                    }
             }
         }
     }
