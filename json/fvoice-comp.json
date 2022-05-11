@@ -1,8 +1,8 @@
 {
     "mapping": [
-        "chest",
-        "false",
-        "fry",
-        "head"
+        "ChestVoice",
+        "Falsetto",
+        "Fry",
+        "HeadVoice"
     ]
 }
