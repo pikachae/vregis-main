@@ -34,11 +34,11 @@ def predict():
     print (audio_file)
     #my_clip = mp.VideoFileClip(r"audio_file")
 
-    # random string of digits for file name
-    file_name = str(random.randint(0, 100000))
-    print(file_name)
-    # save the file locally
-    audio_file.save(file_name)
+    with open('static/audio.wav', 'wb') as audio:
+        audio_file.save(audio)
+    print('file uploaded successfully')
+    filename = "static/audio.wav"
+    print(filename)
 
     # make prediction
 
@@ -52,7 +52,7 @@ def predict():
 
     samples_per_segment = int(SAMPLES_PER_TRACK / num_segments)
     num_mfcc_vectors_per_segment = math.ceil(samples_per_segment / hop_length)
-    signal, sample_rate = librosa.load(file_name, sr=SAMPLE_RATE, res_type='kaiser_fast')
+    signal, sample_rate = librosa.load(filename, sr=SAMPLE_RATE, res_type='kaiser_fast')
 
     for d in range(num_segments):
         start = samples_per_segment * d
@@ -68,15 +68,23 @@ def predict():
     print(mfccs.shape)
     prediction = model.predict(mfccs)
     predicted_index = np.argmax(prediction, axis=1)
-    predicted = z[predicted_index], ":", prediction[0, predicted_index]
+    predicted = z[predicted_index]
+    predicted_percent = prediction[0, predicted_index]
+    predicted = ''.join([str(elem) for elem in predicted])
+    predicted_percent = ''.join([str(elem) for elem in predicted_percent])
+    output = predicted, ":", predicted_percent
     print("Prediction Summary")
-    print(predicted)
+    print(output)
     # 2nd
     prediction1 = prediction
     predicted_index1 = np.argmax(prediction1, axis=1)
     prediction1[0, predicted_index1] = 0
     predicted_index2 = np.argmax(prediction1, axis=1)
-    predicted1 = z[predicted_index2], ":", prediction1[0, predicted_index2]
+    predicted1 = z[predicted_index2]
+    predicted_percent1 = prediction1[0, predicted_index2]
+    predicted1 = ''.join([str(elem) for elem in predicted1])
+    predicted_percent1 = ''.join([str(elem) for elem in predicted_percent1])
+    output1 = predicted1, ":", predicted_percent1
     print(predicted1)
     #3rd
     prediction2 = prediction1
@@ -87,15 +95,12 @@ def predict():
     print(predicted2)
 
 
-    print_message = ' '.join([str(elem) for elem in predicted])
-    print_message2 = ' '.join([str(elem) for elem in predicted1])
+    print_message = ' '.join([str(elem) for elem in output])
+    print_message2 = ' '.join([str(elem) for elem in output1])
 
 
 
     result = print_message
-
-    # remove the .wav file
-    os.remove(file_name)
 
     # message to be displayed on the html webpage
     prediction_message = predicted
@@ -105,7 +110,7 @@ def predict():
     #file_name1 = "1"
     #audio_file.save(file_name1 + ".wav")
 
-    return render_template("vregi-website/prediction2-predicted.html", prediction_text=print_message,prediction_text2=print_message2)
+    return render_template("vregi-website/prediction2-predicted.html", prediction_text=print_message,prediction_text2=print_message2, audiofile="static/audio.wav")
    # return render_template("prediction.html")
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
